@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tomcat
+  namespace: my-example
+spec:
+  containers:
+  - name: tomcat-container
+    image: tomcat
+    resources:
+      limits:
+        cpu: "1"
+      requests:
+        cpu: "0.5"
+    args:
+    - -cpu
+    - "2" 
